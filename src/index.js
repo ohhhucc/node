@@ -1,7 +1,17 @@
-import http from 'http';
+// import http from 'http';
 
-const server = http.createServer((req, res) => {
-    res.end('Hello!');
+// const server = http.createServer((req, res) => {
+//     res.end('Hello!');
+// })
+
+import express from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello from express!');
 })
 
-server.listen(3000);
+app.listen(3000, () => {
+    console.log('Express app on localhost:3000');
+}) ;
