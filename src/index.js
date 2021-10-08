@@ -1,15 +1,11 @@
-// import http from 'http';
-
-// const server = http.createServer((req, res) => {
-//     res.end('Hello!');
-// })
-
 import express from 'express';
+
+import {respond} from "./responder.js";
 
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hello from express!');
+    respond(res);
 })
 
 app.listen(3000, () => {
