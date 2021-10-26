@@ -1,11 +1,11 @@
 import express from 'express';
 
-import {respond} from "./responder.js";
+//import {respond} from "./responder.js";
 
 const app = express();
 
 app.get('/', (req, res) => {
-    respond(res);
+    res.sendFile('views/index.html', {root: './src'})
 })
 
 app.listen(3000, () => {
