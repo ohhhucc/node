@@ -4,6 +4,8 @@ import express from 'express';
 
 const app = express();
 
+app.use(express.urlencoded());
+
 app.get('/', (req, res) => {
     res.sendFile('views/index.html', {root: './src'})
 })
